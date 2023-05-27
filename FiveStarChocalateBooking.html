@@ -1,0 +1,239 @@
+<html>
+    <head><title>Nani</title>
+    <style>
+        #p{
+            margin-left: 50px;
+        }
+        #en{
+            margin-left: 250px;
+        }
+        #s1{
+            margin-left: 500px;
+        }
+        #s2{
+            margin-left: 1000px;;
+        }
+
+        a:link{
+            color:black;
+        }
+        
+        a:visited{
+            color:red;
+        
+        }
+        a:hover{
+            color:hotpink;
+    
+        }
+        
+        a:active{
+            color:lime;
+        }
+
+        .square{
+            height:200px;
+            width:200px;
+            background-color:aqua;
+            margin-left:580px;
+        }
+
+        .ball{
+            border-radius:50px;
+            background-color:yellow;
+            margin-left:650px;
+            width:50px;
+            height:50px;
+            animation:first 1s infinite;
+        }
+        @keyframes first{
+                from {
+                    transform: translate3d(0, 0, 0);
+                }
+                to {
+                    transform: translate3d(0px, 0px, 200px);
+                }
+        }
+        
+        
+    </style></head>
+
+<body bgcolor="white">
+    
+    <marquee scrollamount="15">
+        <center>
+            <h1>
+                <font color="hotpink">Welcome To NANI's Ice Cream's</font>
+            </h1>
+        </center>
+    </marquee>
+
+    <center>
+    <ol>
+        <table border="1" bordercolor="lime" bgcolor="yellow">
+            <th><h1><font color="red">Item Name</font></h1></th><th> <font color="hotpink"><h1> QTY</h1></font></th><th> <font color="orange"> <h1>Price</h1></font></th>
+            <tr align="center"><td><li><b>Cheese Cookies</b></font></td> <td>1</td> <td>10</td> </li></tr>
+            <tr align="center"><td><li><b>Chocolate</td><td>1</td><td>20</td></tr></li></tr>
+            <tr align="center"><td><li><b>Chocolate Penaut Butter Cup</b></td><td>1</td><td>30</td></tr></li></tr>
+            <tr align="center"><td><li><b>Dark Chocolate</b></td><td>1</td><td>45</td></tr></li></tr>
+            <tr align="center"><td><li><b>Mongo</b></td><td>1</td><td>5</td></tr></li></tr>
+            <tr align="center"><td><li><b>Mocha</b></td><td>1</td><td>5</td></tr></li></tr>
+            <tr align="center"><td><li><b>Mint Chip</b></td><td>1</td><td>5</td></tr></li></tr>
+            <tr align="center"><td><li><b>Vannila</b></td><td>1</td><td>5</td></tr></li></tr>
+            <tr align="center"><td><li><b>Wild Straw Berry</b></td><td>1</td><td>5</td></tr></li></tr>
+            <tr align="center"><td><li><b>Straw Berry Sherbet</b></td><td>1</td><td>5</td></tr></li></tr>
+            <tr align="center"><td><li><b>Pistachio</b></td><td>1</td><td>5</td></tr></li></tr>
+        </table>
+    </ol>
+    <br/>
+    <br/>
+
+    <h2>
+        <a href="https://s-media-cache-ak0.pinimg.com/originals/f8/e7/bd/f8e7bd889da08b39508052f7984e2bf3.jpg">Menu card</a>
+    </h2>
+    </center>
+
+
+    <h4>
+        <font color="brown">Enter your amount</font>
+            <input type="text" placeholder="Integers" id="p"/>
+    </h4>
+
+    <button id="en" onclick="fun()">
+            
+        <h3>Enter</h3>
+
+    </button>
+    
+    <h2> 
+        <font color="hotpink">Which Chocalate you want</font>
+    </h2>
+
+    <font color="red"> 
+        Cheese Cookies   <input type="checkbox" onclick="fun1(10)" id="one">
+        <br>
+        <br>
+        Chocolate   <input type="checkbox" onclick="fun1(20)" id="two">
+        <br>
+        <br>
+        Mint Chip   <input type="checkbox" onclick="fun1(45)" id="three">
+        <br>
+        <br>
+        Pistachio  <input type="checkbox" onclick="fun1(30)" id="four">
+    </font>
+
+    <font color="blue">
+        <center>
+            <h1>Have you liked it</h1>
+        </center>
+    </font>
+
+<font color="lime">
+
+    <p>
+
+        <button>
+                <img src="https://tse1.mm.bing.net/th?id=OIP.-Uj3Qm8EhFBF4bWtLK1MVwHaEK&pid=Api&P=0" width="100" height="100" onclick="happy()"/> 
+        </button>
+            
+        <button id="s1">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.I1lmiroIZMoYghv7o2U7AQAAAA&pid=Api&P=0" width="100" height="100" onclick="justok()">
+        </button>
+        <button id="s2">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.G6QyKeCs25OYBxVDfJtDJgHaGn&pid=Api&P=0" width="100" height="100" onclick="notgood()"/>
+        </button>
+
+    </p>
+
+</font>
+
+<div class="ball"></div>
+<div class="square"></div>
+</body>
+
+<script>
+    let tot=0;
+   
+    function fun()
+    {
+        var total=document.getElementById('p').value;
+        tot=parseInt(document.getElementById('p').value);
+
+        if(total.length==0)
+            alert('Enter valid amount');
+        else
+            alert('Thank you for your input');
+   }
+
+   function fun1(b)
+   {    
+        var total=document.getElementById('p').value;
+        if(total.length==0)
+        {
+            alert('plz enter amount');
+            checked="none"
+            document.getElementById('one').checked=false;
+            document.getElementById('two').checked=false;
+            document.getElementById('three').checked=false;  
+            document.getElementById('four').checked=false;
+        }
+
+        else
+        {
+            if(tot<b)
+            {
+                    alert('you doesnt have sufficient amount to buy');
+                    if(b==10)
+                    {
+                        document.getElementById('one').checked=false;
+                    }
+                    if(b==20)
+                    {
+                        document.getElementById('two').checked=false;
+                    }
+                    if(b==45)
+                    {
+                        document.getElementById('three').checked=false;
+                    }
+                    if(b==30)
+                    {  
+                        document.getElementById('four').checked=false;
+                    }
+            }
+            else
+            {
+                if(b==10)
+                    alert('Yaa .. Hoo... Five star is Yours');
+                    
+                if(b==20)
+                    alert('Yaa .. Hoo... Dairy milk is Yours');
+
+                if(b==45)
+                    alert('Yaa .. Hoo... Fuse is Yours');
+                if(b==30)
+                    alert('Yaa .. Hoo snikkers is Yours');
+                tot=tot-b;
+                alert('remaining amount '+tot);
+            }
+        }
+    }
+
+    function happy()
+    {
+        alert("Hooh... Thank You😍");   
+    }
+    function justok()
+    {
+        alert("Thank you.😊");
+    }
+
+    function notgood()
+    {
+        alert("I will improve");
+
+    }
+
+
+
+</script>
+</html>   

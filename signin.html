@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>
+            SignIn
+        </title>
+        <style>
+            #st
+            {
+                margin-left:400px;
+            }
+            cen{
+                background-image: url('https://tse3.mm.bing.net/th?id=OIP.BNJtrzl72RL5WEI8qTm4KAHaEK&pid=Api&P=0');
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="https://tse4.mm.bing.net/th?id=OIP.eszS1kQo5AUfOddMwocR_gHaHa&pid=Api&P=0" width="200" id="st">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.Sm8XsyHxRRPiQRpjN74WKQHaGh&pid=Api&P=0" align="right" height="500"/> 
+            <center>
+                <h2>
+                    <font color='lime'>Fill the Details</font>
+                </h2>
+        
+                <input type="text" placeholder="First name" id='one'/>
+                <br/>
+                <br/>
+                <input type="'text" placeholder="Last Name" id="two"/>
+                <br/>
+                <br/>
+                <input type="text" placeholder="Enter valid E-mail" id="three"/>
+                <br/>
+                <br/>
+                <input type="text" placeholder="Enter Password" id="chk">
+        
+                <br/>
+                <br/>
+                <button type='button' onclick="fun()"><h1><font color="red">Enter</font></h1></button>
+        
+            </center>
+    </body>
+</html>
+
+<script>
+    function fun()
+    {
+        let str=document.getElementById('chk').value;
+        let str1=document.getElementById('one').value;
+        let str2=document.getElementById('two').value;
+        let str3=document.getElementById('three').value;
+
+        if(str.length==0 || str1.length==0 || str2.length==0 || str3.length==0)
+            alert('Plz.... Give all the inputs');
+        
+        else
+            alert('Thank you.. for your valuable input');
+        
+        for (let i=0;i<str.length;i++)
+        {
+            let c=0;
+            if(str[i]=='!' || str[i]=='@' || str[i]=='#' || str[i]=='$' || str[i]=='%' || str[i]=='^' || str[i]=='&'  || str[i]=='*')
+            {
+                c++;
+            }
+        }
+
+        let c1=0;
+
+        for (let i=0;i<str3.length;i++)
+        {
+            if(str3[i]=='@')
+            {
+                c1++;
+            }
+        }
+        if(c1==0 && c==0)
+        {
+            alert('Enter valid email');
+        }
+        if(c<=0)
+        {
+            alert("Password must contais atleast one special character"); 
+        }
+    }
+</script>
